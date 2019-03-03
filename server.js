@@ -79,3 +79,15 @@ app.post("/comments/:id", function(req, res) {
   });
 });
 
+app.get("/comments/delete/:id", function(req, res) {
+db.Comment.findOneAndDelete({ _id: req.params.id })
+  .then(function() {
+    console.log("Delete operation on comment should be complete...");
+  }, function(){
+    console.log("Delete operation failed.");
+  })
+  .catch(function(err) {
+    res.json(err);
+  });
+});
+

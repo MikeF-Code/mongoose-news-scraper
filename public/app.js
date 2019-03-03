@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         commentModal.open();
         if (data.length > 0) {
           for (var i = 0; i < data.length; i++) {
-            $("#comments").append("<li class='colleciton-item'>"+data[i].body+"</li>");
+            $("#comments").append("<li class='collection-item commentItem'><div>"+data[i].body+"<a class='secondary-content deleteComment' data-commentId='"+data[i]._id+"'><i class='material-icons'>cancel</i></a></div></li>");
           }
         }
         $("#saveCommentFooter").append("<a class='modal-close waves-effect waves-green btn-flat' id='saveComment' data-id='" + thisId + "'>Submit</a>");
@@ -75,5 +75,15 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(getArticles, 15000);
       });
   });
+
+  $(document).on("click", ".deleteComment", function(event) {
+    event.preventDefault();
+    var thisId = $(this).attr("data-commentId");
+    $(this).parents(".commentItem").remove();
+    $.ajax({
+      method: "GET",
+      url: "/comments/delete/" + thisId
+    })
+  })
 
 });

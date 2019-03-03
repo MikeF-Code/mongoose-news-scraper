@@ -27,3 +27,7 @@ hr {
 .commentLink {
     color: #FE2015 !important;
 }
+
+.secondary-content > .material-icons {
+    color: #FE2015 !important;
+}
