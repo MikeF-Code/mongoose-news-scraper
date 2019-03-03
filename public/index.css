@@ -1,0 +1,29 @@
+body {
+    background-image: url("background.jpg");
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+}
+
+nav {
+    background-color: #FE2015;
+}
+
+a {
+    color: #021DAA;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+hr {
+    color: #5E5E5E;
+}
+
+.card {
+    background-color: #B9B9B8;
+}
+
+.commentLink {
+    color: #FE2015 !important;
+}

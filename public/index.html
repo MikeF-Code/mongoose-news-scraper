@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Gaming News Scraper</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <a class="brand-logo center">Game News Scraper</a>
+          <ul id="nav-mobile" class="left">
+            <!-- <li><a class="tooltipped" data-position="bottom" data-tooltip="Load Articles"><i class="material-icons">library_books</i></a></li> -->
+            <li><a class="tooltipped" data-position="bottom" data-tooltip="Scrape New Articles" id="scrape"><i class="material-icons">restore_page</i></a></li>
+            <!-- <li><a class="tooltipped" data-position="bottom" data-tooltip="Delete Scraped Articles"><i class="material-icons">cancel</i></a></li> -->
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="container">
+        <div id="articles">
+        </div>
+    </div>
+    <div id="commentModal" class="modal">
+      <div class="modal-content">
+        <h4>Comments</h4>
+        <ul class="collection" id="comments"></ul>
+        <hr>
+        <textarea id="commentEntry" class="materialize-textarea"></textarea>
+        <label for="textarea1">Type your comment...</label>
+      </div>
+      <div class="modal-footer" id="saveCommentFooter">
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
